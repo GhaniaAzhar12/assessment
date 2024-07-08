@@ -1,0 +1,32 @@
+
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:60px;
+    padding-bottom: 40px; 
+  }
+  
+
+  
+  .twoColumnLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 80px;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+ 
+  @media (max-width: 1150px) {
+    .twoColumnLayout {
+      padding: 0 40px;
+      flex-direction: column;
+    }
+  }

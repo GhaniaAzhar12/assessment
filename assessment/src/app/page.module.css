@@ -1,0 +1,7 @@
+.main {
+  min-height: 100vh;
+  background-image: url('../../public/Background.png');
+  background-size: cover; 
+  background-position: center; 
+}
+
