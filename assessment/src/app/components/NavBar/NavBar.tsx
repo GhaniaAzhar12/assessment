@@ -38,7 +38,7 @@ const NavBar: React.FC<NavBarProps> = ({ options, className }) => {
               {option}
             </p>
           ))}
-          <Button text={"Contact Us"} />
+          <Button text={"Contact Us"} type={"button"} />
         </>
       </div>
       <div className={styles.menuToggle} onClick={toggleMenu}>

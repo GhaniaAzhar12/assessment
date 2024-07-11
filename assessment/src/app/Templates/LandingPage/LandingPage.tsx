@@ -17,7 +17,13 @@ import { feedback } from "@/app/constants/Feedback";
 //images
 import transition1 from "../../../../public/Transition_1.png";
 
+import Form from "@/app/components/Form";
+import { inputs } from "@/app/constants/Inputs";
+
 const LandingPage: React.FC = () => {
+  const handleSubmit = (values: { [key: string]: string }) => {
+    console.log("Form submitted with values:", values);
+  };
   return (
     <div className={styles.content}>
       <NavBar options={headerOptions} />
@@ -50,6 +56,24 @@ const LandingPage: React.FC = () => {
           />
         ))}
       </div>
+      <div className={styles.twoColumnLayout}>
+        <div className={styles.imgFormContainer}>
+          <div className={styles.imgFormItem}>
+            <img src={transition1.src} alt="icon" />
+          </div>
+          <div className={styles.imgFormItem}>
+            <Form
+              inputs={inputs}
+              onSubmit={handleSubmit}
+              formTitle={"Registration"}
+              formDesc={
+                " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in stristique senectus dui pharetra sit."
+              }
+            />
+          </div>
+        </div>
+      </div>
+
       <NavBar options={footerOptions} />
     </div>
   );
